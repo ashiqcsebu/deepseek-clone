@@ -7,7 +7,10 @@ import deepSeek from "./deepseek-color.svg";
 import deepSeekText from "./deepseek-text.svg";
 import sideBarLeft from "./sidebar-left.svg";
 import sideBarRight from "./sidebar-right.svg";
-
+import searchIcon from "./search-icon.svg";
+import deepThink from "./deep-think.svg";  
+import attachment from "./attachment.svg";
+import upArrow from "./up-arrow.svg";
 
 export const assets = {
   rightArrow,
@@ -19,5 +22,8 @@ export const assets = {
   deepSeekText,
   sideBarLeft,
   sideBarRight,
-
+  searchIcon,
+  deepThink,
+  attachment,
+  upArrow
 };
