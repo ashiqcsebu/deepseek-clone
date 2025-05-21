@@ -11,6 +11,10 @@ import searchIcon from "./search-icon.svg";
 import deepThink from "./deep-think.svg";  
 import attachment from "./attachment.svg";
 import upArrow from "./up-arrow.svg";
+import deepApp from "./deep-app.png";
+import newIcon from "./new.svg";
+import smartPhone from "./smartphone.svg";
+import profile from "./profile.svg";
 
 export const assets = {
   rightArrow,
@@ -25,5 +29,9 @@ export const assets = {
   searchIcon,
   deepThink,
   attachment,
-  upArrow
+  upArrow,
+  deepApp,
+newIcon,
+smartPhone,
+profile
 };

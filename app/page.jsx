@@ -38,14 +38,13 @@ export default function Home() {
           </div>
           {messages.length == 0 ? (
             <>
-            <div>
+            <div className="flex items-center gap-2">
                <Image
-              className="w-24 h-24"
+              className="w-12 h-12"
               src={assets.deepSeek}
               alt="chat"
-              width={96}
-              height={96}/>
-            <h1 className="text-2xl font-bold mt-4">Hi, Im Deepseek</h1>
+             />
+            <h1 className="text-2xl font-bold ">Hi, Im Deepseek</h1>
             </div>
             <p>How Can I help you?</p>
             </>
