@@ -15,6 +15,9 @@ import deepApp from "./deep-app.png";
 import newIcon from "./new.svg";
 import smartPhone from "./smartphone.svg";
 import profile from "./profile.svg";
+import pencilIcon from "./pencil.svg";
+import deleteIcon from "./delete.svg";
+import dotIcon from "./dots.svg";
 
 export const assets = {
   rightArrow,
@@ -33,5 +36,7 @@ export const assets = {
   deepApp,
 newIcon,
 smartPhone,
-profile
+profile,
+pencilIcon,
+deleteIcon,dotIcon
 };

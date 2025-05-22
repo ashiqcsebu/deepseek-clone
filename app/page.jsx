@@ -1,6 +1,7 @@
 "use client";
 
 import { assets } from "@/assets/assets";
+import Message from "@/components/messageBox";
 import PromptBox from "@/components/promtBox";
 import Sidebar from "@/components/sideBar";
 import Image from "next/image";
@@ -36,7 +37,7 @@ export default function Home() {
               />
             )}
           </div>
-          {messages.length == 0 ? (
+          {messages.length === 0 ? (
             <>
             <div className="flex items-center gap-2">
                <Image
@@ -50,6 +51,7 @@ export default function Home() {
             </>
           ):(
           <div>
+            <Message role='user' content='What Is Ai'/>
             
           </div>
           

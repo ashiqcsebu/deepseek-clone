@@ -1,8 +1,15 @@
 import { assets } from '@/assets/assets';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
+import { useClerk,UserButton } from '@clerk/nextjs';
+import { useAppContext } from '@/context/appContext';
+import ChatLabel from './chatLabel';
 
 const Sidebar = ({ expand, setExpand }) => {
+  const {openSignIn} = useClerk();
+
+  const {user} =useAppContext();
+  const [openMenu,setOpenMenu]= useState({id:0,open:false});
   return (
     <div
       className={`flex flex-col justify-between bg-[#212327] pt-7 transition-all z-50 max-md:absolute max-md:h-screen ${
@@ -86,6 +93,7 @@ const Sidebar = ({ expand, setExpand }) => {
           className={`mt-8 text-white/25 text-sm ${expand ? 'block' : 'hidden'}`}
         >
           <p className="my-1">Recents</p>
+          <ChatLabel openMenu={openMenu} setOpenMenu={setOpenMenu} />
         </div>
       </div>
 
@@ -123,12 +131,15 @@ const Sidebar = ({ expand, setExpand }) => {
         </div>
 
         {/* My Profile - removed mt-2 and added mt-0.5 for minimal spacing */}
-        <div
+        <div onClick={ user ? null: openSignIn}
           className={`flex items-center ${
             expand ? 'hover:bg-white/10 rounded-lg' : 'justify-center w-full'
           } gap-3 text-white/60 text-sm p-2 mt-0.5 cursor-pointer`}
         >
-          <Image src={assets.profile} alt="Profile" className="w-7 invert" />
+          {
+            user ? <UserButton /> : <Image src={assets.profile} alt="Profile" className="w-7 invert" /> 
+          }
+          {/* <Image src={assets.profile} alt="Profile" className="w-7 invert" /> */}
           {expand && <span>My Profile</span>}
         </div>
       </div>
